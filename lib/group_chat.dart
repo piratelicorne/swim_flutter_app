@@ -26,7 +26,8 @@ class GroupChat extends StatelessWidget {
           children: [
             RaisedButton(
               child: Text('MEMBERS'),
-              textColor: Colors.purple[900],
+              color: Colors.deepPurple,
+              textColor: Colors.white,
               onPressed: () {
                 Navigator.push(
                   context,
@@ -36,7 +37,8 @@ class GroupChat extends StatelessWidget {
             ),
             RaisedButton(
               child: Text('INVITE'),
-              textColor: Colors.purple[900],
+              color: Colors.deepPurple,
+              textColor: Colors.white,
               onPressed: () {
                 Navigator.push(
                   context,
