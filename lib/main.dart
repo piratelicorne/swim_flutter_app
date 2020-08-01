@@ -16,16 +16,27 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Center(
-        child: RaisedButton(
-          child: Text('Pool Chat'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Poolchat()),
-            );
-          },
-        ),
+      body: Column(
+        children: [
+          RaisedButton(
+            child: Text('Pool Chat'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Poolchat()),
+              );
+            },
+          ),
+          RaisedButton(
+            child: Text('Group Chat'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Groupchat()),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
@@ -37,6 +48,25 @@ class Poolchat extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Pool chat"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class Groupchat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Group chat"),
       ),
       body: Center(
         child: RaisedButton(
