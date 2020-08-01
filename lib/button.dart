@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Answer extends StatelessWidget {
+class Button extends StatelessWidget {
   final Function selectHandler;
-  final String answerText;
+  final String buttonText;
 
   Answer(this.selectHandler, this.answerText);
 
@@ -13,7 +13,7 @@ class Answer extends StatelessWidget {
       child: RaisedButton(
         color: Colors.blue,
         textColor: Colors.white,
-        child: Text(answerText),
+        child: Text(buttonText),
         onPressed: selectHandler,
       ),
     );

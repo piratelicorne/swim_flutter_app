@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
-import './question.dart';
-import './answer.dart';
+import 'page.dart';
+import 'button.dart';
 
-class Quiz extends StatelessWidget {
-  final List<Map<String, Object>> questions;
-  final int questionIndex;
-  final Function answerQuestion;
+class changeScreen extends StatelessWidget {
+  final List<Map<String, Object>> pages;
+  final String screen;
+  final Function changeScreen;
 
-  Quiz({
-    @required this.questions,
-    @required this.answerQuestion,
-    @required this.questionIndex,
+  changeScreen({
+    @required this.pages,
+    @required this.changeScreen,
+    @required this.screen,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Question(
-          questions[questionIndex]['questionText'],
+        changeScreen(
+          pages[name]['questionText'],
         ),
         ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
             .map((answer) {
