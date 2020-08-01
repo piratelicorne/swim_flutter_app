@@ -1,32 +1,108 @@
 import 'package:flutter/material.dart';
 import './group_chat.dart';
 
-
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
-    home: FirstRoute(),
+    home: Home(),
   ));
 }
 
-class FirstRoute extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Route'),
+        title: Text('Home'),
+      ),
+      body: Column(
+        children: [
+          RaisedButton(
+            child: Text('Pool Chat'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Poolchat()),
+              );
+            },
+          ),
+          RaisedButton(
+            child: Text('Group Chat'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Groupchat()),
+              );
+            },
+          ),
+          RaisedButton(
+            child: Text('1-1 Chat'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Onechat()),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Poolchat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Pool chat"),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Group Chat'),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => GroupChat()),
-            );
+            Navigator.pop(context);
           },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class Onechat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("1-1 chat"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class Groupchat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Group chat"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
         ),
       ),
     );
