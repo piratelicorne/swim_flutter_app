@@ -36,6 +36,15 @@ class Home extends StatelessWidget {
               );
             },
           ),
+          RaisedButton(
+            child: Text('1-1 Chat'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Onechat()),
+              );
+            },
+          ),
         ],
       ),
     );
@@ -48,6 +57,25 @@ class Poolchat extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Pool chat"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}
+
+class Onechat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("1-1 chat"),
       ),
       body: Center(
         child: RaisedButton(
