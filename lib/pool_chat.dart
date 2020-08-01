@@ -35,7 +35,7 @@ class pool_chat extends StatelessWidget {
       ),
     );
 
-    final button_chat = new InkWell(
+    final button_location = new InkWell(
       child: new Container(
           margin: new EdgeInsets.only(
               top: 30.0,
@@ -68,7 +68,7 @@ class pool_chat extends StatelessWidget {
       ),
     );
 
-    final button_chat = new InkWell(
+    final button_member = new InkWell(
       child: new Container(
           margin: new EdgeInsets.only(
               top: 30.0,
@@ -110,15 +110,11 @@ class pool_chat extends StatelessWidget {
           ),
           child: new Column(
           children: <Widget>[
-          new Text(
-          "TUESDAY",
-          style: const TextStyle(
-          fontSize: 55.0,
-          color: Color(0xFFeba800),
-          fontWeight: FontWeight.w500
-          ),
-        ),
-        button
+
+        button_chat
+        button_location
+        button_member
+
       ]
     )
     )
