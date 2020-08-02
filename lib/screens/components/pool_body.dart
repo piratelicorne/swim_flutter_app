@@ -25,7 +25,7 @@ class PGSectHeader extends StatelessWidget {
       children: <Widget>[
         Text("42 HACKATON"),
         Container(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(1.0),
           height: 100,
           width: 120,
           decoration: BoxDecoration(
@@ -68,41 +68,12 @@ class PCSectChat extends StatelessWidget {
 class PCSectOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context){
-    return Row(
-        children: [
-          Container(
-            child: Center(
-              child: Text(
-                "Hello everyone, the hackathon is ending!:)",
-                textAlign: TextAlign.left,
-              ),
-            ),
-            color: Colors.orange,
-            margin: EdgeInsets.all(25.0),
-          ),
-          Container(
-            child: Center(
-              child: Text(
-                "Yes, we will have the results tomorrow.",
-                textAlign: TextAlign.right,
-              ),
-            ),
-            color: Colors.blue,
-            margin: EdgeInsets.all(25.0),
-
-          ),
-          Container(
-            child: Center(
-              child: Text(
-                "that's exciting!",
-                textAlign: TextAlign.left,
-              ),
-            ),
-            color: Colors.purple,
-            margin: EdgeInsets.all(25.0),
-
-          )
-        ]
+    return MaterialApp(
+      title: 'Chat',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: pool_home_screen(),
     );
   }
 }
