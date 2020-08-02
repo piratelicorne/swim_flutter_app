@@ -5,7 +5,7 @@ import './group_chat.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Swim-App',
+    title: 'Navigation Basics',
     home: Home(),
   ));
 }
