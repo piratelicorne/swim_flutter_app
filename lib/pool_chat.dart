@@ -1,127 +1,31 @@
 import 'package:flutter/material.dart';
+import 'screens/components/pool_body.dart';
 
-class pool_chat extends StatelessWidget {
-  Widget build(BuildContext context){
-    final button_chat = new InkWell(
-      child: new Container(
-          margin: new EdgeInsets.only(
-              top: 30.0,
-              left: 20.0,
-              right: 20
-          ),
-          height: 20.0,
-          width: 50.0,
-          decoration: new BoxDecoration(
-            boxShadow: [
-              new BoxShadow(
-                  color: Color(0xFF38b02),
-                  offset: new Offset(10.0, 10.0),
-                  blurRadius: 30.0
-              )
-            ],
-            borderRadius: new BorderRadius.circular(10.0),
-            color: Color(0xFFfeb800),
-          ),
-          child: new Center(
-              child: new Text(
-                "CHAT",
-                style: const TextStyle(
-                  fontSize: 12.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                ),
-              )
-          )
+class Poolchat extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.teal[100],
+      appBar: AppBar(
+        title: Text("Group chat"),
+        backgroundColor: Colors.teal[500],
       ),
-    );
-
-    final button_location = new InkWell(
-      child: new Container(
-          margin: new EdgeInsets.only(
-              top: 30.0,
-              left: 20.0,
-              right: 20
-          ),
-          height: 20.0,
-          width: 50.0,
-          decoration: new BoxDecoration(
-            boxShadow: [
-              new BoxShadow(
-                  color: Color(0xFF38b02),
-                  offset: new Offset(10.0, 10.0),
-                  blurRadius: 30.0
-              )
-            ],
-            borderRadius: new BorderRadius.circular(10.0),
-            color: Color(0xFFfeb800),
-          ),
-          child: new Center(
-              child: new Text(
-                "LOCATION",
-                style: const TextStyle(
-                  fontSize: 12.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                ),
-              )
-          )
-      ),
-    );
-
-    final button_member = new InkWell(
-      child: new Container(
-          margin: new EdgeInsets.only(
-              top: 30.0,
-              left: 20.0,
-              right: 20
-          ),
-          height: 20.0,
-          width: 50.0,
-          decoration: new BoxDecoration(
-            boxShadow: [
-              new BoxShadow(
-                  color: Color(0xFF38b02),
-                  offset: new Offset(10.0, 10.0),
-                  blurRadius: 30.0
-              )
-            ],
-            borderRadius: new BorderRadius.circular(10.0),
-            color: Color(0xFFfeb800),
-          ),
-          child: new Center(
-              child: new Text(
-                "MEMBERS",
-                style: const TextStyle(
-                  fontSize: 12.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w900,
-                ),
-              )
-          )
-      ),
-        return new Scaffold(
-          body: new Stack(
+      body: Container(
+        child: Column(
           children: <Widget>[
-              new BackWheater(),
-          new Container(
-             alignment: Alignment.center,
-              margin: new EdgeInsets.only(
-              top: 50.0
-          ),
-          child: new Column(
-          children: <Widget>[
-
-        button_chat
-        button_location
-        button_member
-
-      ]
-    )
-    )
-
-    ],
-    ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                alignment: Alignment.center,
+                color: Colors.deepPurple[100],
+              ),
+            ),
+            Expanded(flex: 1, child: PGSectHeader(),),
+            Expanded(flex: 4, child: GCSectChat(),),
+            Expanded(flex: 4, child: GCSectOptions(),),
+          ],
+        ),
+      ),
     );
-
-    );
+  }
 }
