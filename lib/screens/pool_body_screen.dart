@@ -72,7 +72,7 @@ class PCSectOptions extends StatelessWidget {
     return MaterialApp(
       title: 'Chat',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: HomeScreen(),
     );

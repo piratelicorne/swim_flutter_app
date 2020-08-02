@@ -1,38 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'dart:io';
 
-/* 
-  A stateless widget is a widget that describes part of the user interface by building
-  a constellation of other widgets that describe the user interface more concretely.
-  
-  Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
-  Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a
-  stateful widget requires at least two classes:
-
-*/
-
-/**
- * 
-class Groupchat extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
- */
-
-
 class Groupchat extends StatelessWidget {
   @override
   Widget build(BuildContext context){
