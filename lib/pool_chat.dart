@@ -7,7 +7,7 @@ class Poolchat extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal[100],
       appBar: AppBar(
-        title: Text("Group chat"),
+        title: Text("Pool chat"),
         backgroundColor: Colors.teal[500],
       ),
       body: Container(
@@ -21,8 +21,8 @@ class Poolchat extends StatelessWidget {
               ),
             ),
             Expanded(flex: 1, child: PGSectHeader(),),
-            Expanded(flex: 4, child: GCSectChat(),),
-            Expanded(flex: 4, child: GCSectOptions(),),
+            Expanded(flex: 4, child: PCSectChat(),),
+            Expanded(flex: 4, child: PCSectOptions(),),
           ],
         ),
       ),

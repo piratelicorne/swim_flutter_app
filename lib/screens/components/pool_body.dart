@@ -1,8 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:swim_flutter_app/models/pool_chat.dart';
+import 'package:swim_flutter_app/screens/components/pool_home_screen.dart';
 //import 'package:swim_flutter_app/models/Pool.dart';
 //import 'package:swim_flutter_app/models/Posts.dart';
 //import 'package:swim_flutter_app/models/Hashtags.dart';
+
 
 /*
 class GBSectUsers extends StatelessWidget {
@@ -20,23 +23,16 @@ class PGSectHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       children: <Widget>[
+        Text("42 HACKATON"),
         Container(
-          height: 120.0,
-          width: 120.0,
-          child: Center(
-            child: Text(
-              "HACKATON",
-              textAlign: TextAlign.center,
-            ),
-          ),
+          padding: EdgeInsets.all(8.0),
+          height: 100,
+          width: 120,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                'graphics/pool_chat_hackaton.jpg',
-              )
-            ),
+            color: pools[0].color,
+            borderRadius: BorderRadius.circular(16),
           ),
-
+          child: Image.asset(pools[1].image),
         ),
         RaisedButton(
           child: Text('TALK'),
@@ -55,7 +51,7 @@ class PGSectHeader extends StatelessWidget {
 }
 
 
-class GCSectChat extends StatelessWidget {
+class PCSectChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,11 +60,12 @@ class GCSectChat extends StatelessWidget {
         title: const Text('Search', style: TextStyle(color: Colors.white)),
         iconTheme: IconThemeData(color: Colors.white),
       ),
+      body: pool_home_screen(),
     );
   }
 }
 
-class GCSectOptions extends StatelessWidget {
+class PCSectOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Row(
