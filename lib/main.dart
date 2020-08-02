@@ -7,6 +7,7 @@ void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
     home: Home(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
