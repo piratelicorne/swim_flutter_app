@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
+import './pool_chat.dart';
+import './one_chat.dart';
+import './group_chat.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -46,63 +48,6 @@ class Home extends StatelessWidget {
             },
           ),
         ],
-      ),
-    );
-  }
-}
-
-class Poolchat extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Pool chat"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
-class Onechat extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("1-1 chat"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
-class Groupchat extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Group chat"),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
       ),
     );
   }
