@@ -7,7 +7,9 @@ void main() {
   runApp(MaterialApp(
     title: 'Navigation Basics',
     home: Home(),
-    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      fontFamily: 'Proxima Nova'),
+      debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -20,7 +22,6 @@ class Home extends StatelessWidget {
         title: Text('Home',
         style: TextStyle(
           fontSize: 16.0,
-          fontFamily: 'NunitoBold',
         ),),
         backgroundColor: Colors.teal[500],
       ),
@@ -33,7 +34,6 @@ class Home extends StatelessWidget {
               child: Text('Pool Chat',
               style: TextStyle(
                 fontSize: 20.0,
-                fontFamily: 'Nunito',
               ),
             ),
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
@@ -51,7 +51,6 @@ class Home extends StatelessWidget {
               child: Text('Group Chat',
                 style: TextStyle(
                   fontSize: 20.0,
-                  fontFamily: 'Nunito',
                 ),
               ),
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
@@ -69,7 +68,6 @@ class Home extends StatelessWidget {
               child: Text('1-1 Chat',
                 style: TextStyle(
                   fontSize: 20.0,
-                  fontFamily: 'Nunito',
                 ),
               ),
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),

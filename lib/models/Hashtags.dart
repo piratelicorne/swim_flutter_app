@@ -13,7 +13,7 @@ class Hashtag {
   });
 }
 
-List< Hashtag> hashtags = [
+List<Hashtag> hashtags = [
    Hashtag(
     id: 1,
     hashtag: "#cats",

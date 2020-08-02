@@ -3,15 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:swim_flutter_app/models/Pool.dart';
 import 'package:swim_flutter_app/models/Posts.dart';
 import 'package:swim_flutter_app/models/Hashtags.dart';
+import '../group_members.dart';
+import '../list_friends.dart';
 
-/*
-class GBSectUsers extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    return Scaffold();
-  }
-}
-*/
 
 class GBSectButtons extends StatelessWidget {
   @override
@@ -31,7 +25,7 @@ class GBSectButtons extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => null),
+              MaterialPageRoute(builder: (context) => GroupMembersListApp()),
             );
           },
           shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
@@ -48,7 +42,7 @@ class GBSectButtons extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => null),
+              MaterialPageRoute(builder: (context) => FriendsListApp()),
             );
           },
           shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
@@ -77,7 +71,6 @@ class GBSectMedia extends StatelessWidget {
     );
   }
 }
-
 
 class GBSectPools extends StatelessWidget {
   @override
@@ -164,7 +157,7 @@ class GBSectHashtags extends StatelessWidget {
 }
 
 
-//WAITING
+//PENDING
 
 class GBSectChat extends StatelessWidget {
   @override
@@ -178,13 +171,12 @@ class GBSectChat extends StatelessWidget {
   }
 }
 
-
-
-
-
-/*
-           Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text('Last messages'),
- */
+class GBSectUser extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      alignment: Alignment.center,
+      color: Colors.deepPurple[100],
+    );
+  }
+}
