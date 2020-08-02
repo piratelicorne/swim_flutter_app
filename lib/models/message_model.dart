@@ -16,20 +16,20 @@ class Message {
 final User currentUser = User(
   id: 0,
   name: 'Current User',
-  imageUrl: 'assets/images/Edi.png',
+  imageUrl: 'graphics/profile.jpeg',
 );
 
 //Users
 final User meli = User(
   id: 1,
   name: 'Meli',
-  imageUrl: 'assets/images/Meli.png',
+  imageUrl: 'graphics/profile.jpeg',
 );
 
 final User aline = User(
   id: 2,
   name: 'Aline',
-  imageUrl: 'assets/images/Aline.png',
+  imageUrl: 'graphics/profile.jpeg',
 );
 
 // FAVORITE CONTACTS
