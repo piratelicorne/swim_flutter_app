@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:swim_flutter_app/models/Pool.dart';
@@ -163,12 +165,49 @@ class GBSectChat extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Container(
-      color: Colors.deepPurple[300],
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      )
+      decoration: BoxDecoration(
+        color: Colors.teal[900].withOpacity(0.2),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30.0),
+          topRight: Radius.circular(30.0),
+        ),
+      ),
+      child: LastMessages(),
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     );
   }
+}
+
+class LastMessages extends StatelessWidget{
+   @override
+   Widget build(BuildContext context){
+     return Column(
+       children: <Widget>[
+         Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                'Last messages',
+                style: TextStyle(
+                  color: Colors.deepPurple[800],
+                  fontFamily: 'NunitoBold',
+                  fontSize: 18,
+                ),
+              ),
+              IconButton(
+                icon: Icon(Icons.keyboard_arrow_up),
+                color: Colors.deepPurple[800],
+                iconSize: 28,
+                onPressed: (){},
+              ),
+            ],
+          ),
+        ),
+       ],
+     );
+   }
 }
 
 class GBSectUser extends StatelessWidget {
@@ -176,7 +215,7 @@ class GBSectUser extends StatelessWidget {
   Widget build(BuildContext context){
     return Container(
       alignment: Alignment.center,
-      color: Colors.deepPurple[100],
+      color: Colors.deepPurple[100].withOpacity(0.4),
     );
   }
 }
