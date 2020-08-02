@@ -29,7 +29,7 @@ class Groupchat extends StatelessWidget {
             ),
             Expanded(flex: 1, child: GBSectButtons(),),
             Expanded(flex: 4, child: GBSectMedia(),),
-            Expanded( flex: 4, child: GBSectChat(),),
+            Expanded(flex: 4, child: GBSectChat(),),
           ],
         ),
       ),
