@@ -20,7 +20,12 @@ class GBSectButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         RaisedButton(
-          child: Text('MEMBERS'),
+          child: Text('MEMBERS',
+            style: TextStyle(
+              fontSize: 13.0,
+              fontFamily: 'NunitoBold',
+            ),
+          ),
           color: Colors.deepPurple,
           textColor: Colors.white,
           onPressed: () {
@@ -29,9 +34,15 @@ class GBSectButtons extends StatelessWidget {
               MaterialPageRoute(builder: (context) => null),
             );
           },
+          shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
         ),
         RaisedButton(
-          child: Text('INVITE'),
+          child: Text('INVITE',
+            style: TextStyle(
+              fontSize: 13.0,
+              fontFamily: 'NunitoBold',
+            ),
+          ),
           color: Colors.deepPurple,
           textColor: Colors.white,
           onPressed: () {
@@ -40,6 +51,7 @@ class GBSectButtons extends StatelessWidget {
               MaterialPageRoute(builder: (context) => null),
             );
           },
+          shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
         ),
       ],
     );
@@ -73,7 +85,12 @@ class GBSectPools extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          Text("Pools near you"),
+          Text("Pools near you",
+            style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'NunitoExtraBold',
+            ),
+          ),
           Container(
             padding: EdgeInsets.all(8.0),
             height: 100,
@@ -96,7 +113,12 @@ class GBSectPosts extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          Text("Recent Posts"),
+          Text("Recent Posts",
+            style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'NunitoExtraBold',
+            ),
+          ),
           Container(
             padding: EdgeInsets.all(8.0),
             height: 100,
@@ -119,7 +141,12 @@ class GBSectHashtags extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          Text("Hashtags"),
+          Text("Hashtags",
+            style: TextStyle(
+              fontSize: 12,
+              fontFamily: 'NunitoExtraBold',
+            ),
+          ),
           Container(
             padding: EdgeInsets.all(8.0),
             height: 150,
@@ -155,31 +182,8 @@ class GBSectChat extends StatelessWidget {
 
 
 
-/**
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text('Pools near you'),
-                  Image.asset(
-                    'graphics/outside_dorms_parking.jpeg',
-                    height: 100,
-                    width: 100,
-                  ),
-                  Text('Photos & Videos'),
-                  Image.asset(
-                    'graphics/outside_dorms_tree.jpeg',
-                    height: 100,
-                    width: 100,
-                  ),
-                  Text('Hashtags'),
-                  Image.asset(
-                    'graphics/outside_dorms_link.jpeg',
-                    height: 100,
-                    width: 100,
-                    ),
-                ],
-              ),
-              Row(
+/*
+           Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text('Last messages'),

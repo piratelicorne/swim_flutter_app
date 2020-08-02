@@ -14,7 +14,12 @@ class Groupchat extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal[100],
       appBar: AppBar(
-        title: Text("Group chat"),
+        title: Text("Group chat",
+          style: TextStyle(
+                fontSize: 20.0,
+                fontFamily: 'NunitoBold',
+              ),
+        ),
         backgroundColor: Colors.teal[500],
       ),
       body: Container(

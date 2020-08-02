@@ -17,7 +17,11 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal[100],
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Home',
+        style: TextStyle(
+          fontSize: 16.0,
+          fontFamily: 'NunitoBold',
+        ),),
         backgroundColor: Colors.teal[500],
       ),
       body: Center(
@@ -26,9 +30,16 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RaisedButton(
-              child: Text('Pool Chat'),
+              child: Text('Pool Chat',
+              style: TextStyle(
+                fontSize: 20.0,
+                fontFamily: 'Nunito',
+              ),
+            ),
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
               color: Colors.deepPurple,
               textColor: Colors.white,
+              
               onPressed: () {
                 Navigator.push(
                   context,
@@ -37,8 +48,15 @@ class Home extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text('Group Chat'),
+              child: Text('Group Chat',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontFamily: 'Nunito',
+                ),
+              ),
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
               color: Colors.deepPurple,
+              highlightColor: Colors.teal,
               textColor: Colors.white,
               onPressed: () {
                 Navigator.push(
@@ -48,8 +66,15 @@ class Home extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text('1-1 Chat'),
+              child: Text('1-1 Chat',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontFamily: 'Nunito',
+                ),
+              ),
+              shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
               color: Colors.deepPurple,
+              highlightColor: Colors.teal,
               textColor: Colors.white,
               onPressed: () {
                 Navigator.push(
