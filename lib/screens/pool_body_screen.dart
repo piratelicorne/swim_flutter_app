@@ -27,11 +27,11 @@ class PGSectHeader extends StatelessWidget {
         Text("42 HACKATON"),
         Container(
           padding: EdgeInsets.all(1.0),
-          height: 100,
-          width: 120,
+          height: 250,
+          width: 300,
           decoration: BoxDecoration(
             color: pools[0].color,
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(5),
           ),
           child: Image.asset(pools[0].image),
         ),
