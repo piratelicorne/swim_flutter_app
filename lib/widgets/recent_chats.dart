@@ -21,7 +21,7 @@ class RecentChats extends StatelessWidget {
               children: <Widget>[
                 CircleAvatar(
                   radius: 35.0,
-                  //backgroundImage: AssetImage(chat.sender.imageUrl),
+                  backgroundImage: AssetImage(chat.sender.imageUrl),
                 ),
                 Text(
                   chat.sender.name,
