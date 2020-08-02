@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:swim_flutter_app/models/pool_chat.dart';
+import 'package:swim_flutter_app/models/pool_chat_model.dart';
 import 'package:swim_flutter_app/screens/components/pool_home_screen.dart';
+
 //import 'package:swim_flutter_app/models/Pool.dart';
 //import 'package:swim_flutter_app/models/Posts.dart';
 //import 'package:swim_flutter_app/models/Hashtags.dart';
@@ -19,7 +20,7 @@ class GBSectUsers extends StatelessWidget {
 class PGSectHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context){
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       children: <Widget>[
@@ -32,7 +33,7 @@ class PGSectHeader extends StatelessWidget {
             color: pools[0].color,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Image.asset(pools[1].image),
+          child: Image.asset(pools[0].image),
         ),
         RaisedButton(
           child: Text('TALK'),
@@ -47,7 +48,7 @@ class PGSectHeader extends StatelessWidget {
         ),
       ],
     );
-  }
+}
 }
 
 
@@ -60,7 +61,7 @@ class PCSectChat extends StatelessWidget {
         title: const Text('Search', style: TextStyle(color: Colors.white)),
         iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: pool_home_screen(),
+      //body: pool_home_screen(),
     );
   }
 }
@@ -73,7 +74,7 @@ class PCSectOptions extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: pool_home_screen(),
+      home: HomeScreen (),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/components/pool_body.dart';
+import 'screens/pool_body_screen.dart';
 
 class Poolchat extends StatelessWidget {
   @override

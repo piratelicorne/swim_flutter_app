@@ -19,7 +19,7 @@ List<Pool> pools = [
     name: "Parking 42",
     location: "Dumbarton Circle 35471, Fremont",
     image: "graphics/pool_chat_hackaton.jpeg",
-    color: Colors.deepPurple[300],
+    color: Colors.deepPurple[400],
   ),
   Pool(
     id: 2,
