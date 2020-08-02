@@ -3,11 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:swim_flutter_app/models/pool_chat_model.dart';
 import 'package:swim_flutter_app/screens/pool_home_screen.dart';
 
-//import 'package:swim_flutter_app/models/Pool.dart';
-//import 'package:swim_flutter_app/models/Posts.dart';
-//import 'package:swim_flutter_app/models/Hashtags.dart';
-
-
 /*
 class GBSectUsers extends StatelessWidget {
   @override
@@ -55,13 +50,29 @@ class PGSectHeader extends StatelessWidget {
 class PCSectChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        brightness: Brightness.dark,
-        title: const Text('Search', style: TextStyle(color: Colors.white)),
-        iconTheme: IconThemeData(color: Colors.white),
+    return Container(
+      alignment: Alignment.center,
+      color: Colors.deepPurple[100].withOpacity(0.4),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget> [
+          Text(
+          'Search',
+          style: TextStyle(
+            color: Colors.deepPurple[600],
+            fontSize: 22,
+            ),
+          ),
+          IconButton(
+                  icon: Icon(Icons.search),
+                  color: Colors.deepPurple[800],
+                  iconSize: 28,
+                  onPressed: (){},
+                ),
+        ],
       ),
-      //body: pool_home_screen(),
+      
+      //iconTheme: IconThemeData(color: Colors.white),
     );
   }
 }
@@ -69,6 +80,30 @@ class PCSectChat extends StatelessWidget {
 class PCSectOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context){
+    /*
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.teal[900].withOpacity(0.2),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30.0),
+          topRight: Radius.circular(30.0),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget> [
+          Text(
+          'Chat',
+          style: TextStyle(
+            color: Colors.deepPurple[900],
+            fontSize: 22,
+            ),
+          ),
+        ],
+      ),
+    );
+     */
+
     return MaterialApp(
       title: 'Chat',
       theme: ThemeData(
