@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import './pool_chat.dart';
-import './one_chat.dart';
-import './group_chat.dart';
-import './utilities/app_theme.dart';
+import './index.dart';
 
 void main() {
   runApp(MaterialApp(
