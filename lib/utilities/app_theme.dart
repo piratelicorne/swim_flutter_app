@@ -50,8 +50,8 @@ class AppTheme {
 
   static final TextStyle _lightScreenHeadingTextStyle = TextStyle(
     fontFamily: "RobotoMono",  
-    fontSize: 42.0,
-    color: _lightOnPrimaryColor,
+    fontSize: 21.0,
+    color: _lightPrimaryColor,
   );
 
   static final TextStyle _lightScreenButtonText = TextStyle(
@@ -97,8 +97,8 @@ class AppTheme {
 
   static final TextStyle _darkScreenHeadingTextStyle = TextStyle(
     fontFamily: "RobotoMono",  
-    fontSize: 42.0,
-    color: _darkOnPrimaryColor,
+    fontSize: 21.0,
+    color: _darkPrimaryColor,
   );
 
   static final TextStyle _darkScreenButtonText = TextStyle(
