@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swim_flutter_app/models/pool_message_model.dart';
-import 'package:swim_flutter_app/screens/pool_chat_screen.dart';
+import 'package:swim_flutter_app/screens/components/pool_chat_screen.dart';
 
 class FavoriteContacts extends StatelessWidget {
   @override
