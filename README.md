@@ -6,20 +6,22 @@ We participated in the Swim-42 Hackathon, which consisted in developing a mobile
 
 ⚠️ This project is to practice.
 
-
 ## Structure
 
-During the hackathon weekend our mobile app' structure (directory wise) was a little crazy... but following a medium article, here it is our new structure:
+During the hackathon weekend our mobile app' structure (directory wise) was a little crazy... but following a medium article, here it is our new structure lib/:
 
-- index.dart: file that export all the other dart files, this one must be imported in files that have dependecies.
+- index.dart: file that export all the other dart files, this one must be imported(called) in files that have dependecies.
 - images: Folder to hold the images/assets used in the project.
 - screens: This folder contains the screens which will be configured in the routes in the main.dart file.
    In this case, will be the screens for: 'Pool chat', 'Group Chat', '1 to 1 Chat'.  
 - models: models with information (usually from database).
-   In this case, we will work with draft data.  
+   In this case, we will work with sample data.  
 - utilities: All the common items goes in here, including resources for the README file.
 
+
 🏴‍☠️ Resource: https://medium.com/incresco/flutter-scalable-app-folder-structure-6f2b0bc139c4
+
+
 
 ## Themes
 
@@ -28,42 +30,68 @@ Setting themes and working with them is so much easy, we'd defined the mobile ap
 <img src="https://github.com/42-swim-hackaton/swim_flutter_app/blob/master/lib/utilities/resources/Light-Theme.png" alt="Light Theme" width="300" HSPACE="42"/>  <img src="https://github.com/42-swim-hackaton/swim_flutter_app/blob/master/lib/utilities/resources/Dark-Theme.png" alt="Dark Theme" width="300" HSPACE="42"/>
 
 e.g.
-⭐️ If in *utilities/app_theme.dart* is defined as:
+
+⭐️ In order to set color, do this:
 
 ```
-class AppTheme {
+  static Color _lightPrimaryVariantColor = Color(0xFF15A8A4);
 
-  static Color _lightPrimaryColor = Colors.white;
-  
-  static final ThemeData lightTheme = ThemeData(
+  static final ThemeData lightTheme 🟡 = ThemeData(
     scaffoldBackgroundColor: _lightPrimaryColor,
-    .....
-    textTheme: _lightTextTheme,
+    appBarTheme: AppBarTheme(
+      color: _lightPrimaryVariantColor,
+      iconTheme: IconThemeData(
+        color: _lightOnPrimaryColor,
+      ),
+    ),
+    textTheme: _lightTextTheme, 🟢
   );
-
-  static final TextTheme _lightTextTheme = TextTheme(
+  
+   static final TextTheme _lightTextTheme 🟢  = TextTheme(
+    headline🔵: _lightScreenHeadingTextStyle, 🟣
     display1: _lightScreenButtonText,
+    body2: _lightScreenWidgetTitle, 
   );
-
-  static final TextStyle _lightScreenButtonText = TextStyle(
+  
+   static final TextStyle _lightScreenHeadingTextStyle 🟣 = TextStyle(
     fontFamily: "RobotoMono",  
-    fontSize: 24.0,
-    color: _lightSecondaryColor,
+    fontSize: 21.0,
+    color: _lightPrimaryColor,
   );
-
-
-}
 ```
 
-⭐️ You must use the color as:
-   ```style: Theme.of(context).textTheme.display1,),```
-   
-   
-⭐️ If you want to change the **_lightPrimaryColor**, then you only need to update this line of the file *utilities/app_theme.dart*:
+   You must use it this way:
+```
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Swim App Hackathon Contribution',
+      theme: AppTheme.lightTheme, 🟡
+      darkTheme: AppTheme.darkTheme,
+      home: Home(),
+    )
+  );
+  
+  class Home extends StatelessWidget {
+     @override
+     Widget build(BuildContext context) {
+      return Scaffold(
+         appBar: AppBar(
+           title: Text(
+             'Navigate Life',
+             style: Theme.of(context).textTheme.headline 🔵,
+             ),
+           ),
+         ),
+         ...
+       );
+      }
+    }
+```
+   This line, is the one who make use of the color according to the theme, either the light or the dark one -> ```style: Theme.of(context).textTheme.headline,```
 
-```
-  static Color _lightPrimaryColor = Colors.white;
-```
+⭐️ If you change the value for **_lightPrimaryVariantColor**, the AppBar will change automatically the background color :) and so on...
 
 
 🏴‍☠️ Resource: https://www.youtube.com/watch?v=RJkiESVJXAk
@@ -73,3 +101,4 @@ class AppTheme {
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 - [online documentation](https://flutter.dev/docs), which offers tutorials, samples, guidance on mobile development, and a full API reference.
+
