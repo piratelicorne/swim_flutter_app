@@ -25,8 +25,7 @@ During the hackathon weekend our mobile app' structure (directory wise) was a li
 
 Setting themes and working with them is so much easy, we'd defined the mobile app's colors and fonts in the **app_theme** file for Light and Dark Theme, here in a example of the presets:
 
-<img src="https://github.com/42-swim-hackaton/swim_flutter_app/blob/master/lib/utilities/resources/Light-Theme.png" alt="Light Theme" width="300"/>
-<img src="https://github.com/42-swim-hackaton/swim_flutter_app/blob/master/lib/utilities/resources/Dark-Theme.png" alt="Dark Theme" width="300"/>
+<img src="https://github.com/42-swim-hackaton/swim_flutter_app/blob/master/lib/utilities/resources/Light-Theme.png" alt="Light Theme" width="300"/> &nbsp p<img src="https://github.com/42-swim-hackaton/swim_flutter_app/blob/master/lib/utilities/resources/Dark-Theme.png" alt="Dark Theme" width="300"/>
 
 
 🏴‍☠️ Resource: https://www.youtube.com/watch?v=RJkiESVJXAk
