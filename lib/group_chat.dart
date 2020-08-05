@@ -12,12 +12,8 @@ class Groupchat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[100],
       appBar: AppBar(
-        title: Text("Group chat",
-          style: TextStyle(fontSize: 16.0,),
-        ),
-        backgroundColor: Colors.teal[500],
+        title: Text("Group chat",),
       ),
       body: Container(
         child: Column(

@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import './pool_chat.dart';
 import './one_chat.dart';
 import './group_chat.dart';
+import './utilities/app_theme.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'Navigation Basics',
+    debugShowCheckedModeBanner: false,
+    title: 'Swim App Hackathon Contribution',
+    theme: AppTheme.lightTheme,
+    darkTheme: AppTheme.darkTheme,
     home: Home(),
-    theme: ThemeData(
-      fontFamily: 'Proxima Nova'),
-      debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -17,13 +18,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal[100],
       appBar: AppBar(
-        title: Text('Home',
-        style: TextStyle(
-          fontSize: 16.0,
-        ),),
-        backgroundColor: Colors.teal[500],
+        title: Text('Navigate Life'),
+        leading: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Icon(Icons.menu),
+        ),
       ),
       body: Center(
         child: Column(
@@ -31,54 +31,27 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RaisedButton(
-              child: Text('Pool Chat',
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
-            ),
+              child: Text('Pool Chat', style: Theme.of(context).textTheme.display1,),
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
-              color: Colors.deepPurple,
-              textColor: Colors.white,
-              
+              highlightColor: Colors.teal,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Poolchat()),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Poolchat()),);
               },
             ),
             RaisedButton(
-              child: Text('Group Chat',
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
+              child: Text('Group Chat', style: Theme.of(context).textTheme.display1,),
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
-              color: Colors.deepPurple,
               highlightColor: Colors.teal,
-              textColor: Colors.white,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Groupchat()),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Groupchat()),);
               },
             ),
             RaisedButton(
-              child: Text('1-1 Chat',
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
+              child: Text('1-1 Chat', style: Theme.of(context).textTheme.display1,),
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
-              color: Colors.deepPurple,
               highlightColor: Colors.teal,
-              textColor: Colors.white,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Onechat()),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Onechat()),);
               },
             ),
           ],
