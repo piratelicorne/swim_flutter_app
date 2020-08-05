@@ -1,4 +1,4 @@
-import './user_model.dart';
+import '../index.dart';
 
 class Message {
   final User sender;
@@ -16,7 +16,7 @@ class Message {
 final User currentUser = User(
   id: 0,
   name: 'Current User',
-  imageUrl: 'graphics/profile.jpeg',
+  imageUrl: 'images/profile.jpeg',
 );
 
 //Users

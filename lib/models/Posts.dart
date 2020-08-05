@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../index.dart';
 
 class Post {
   final String title, user, content, image;
@@ -20,7 +20,7 @@ List<Post> posts = [
     title: "Cats in the Parking lot",
     user: "Meli",
     content: "Today I found 3 kittens....",
-    image: "graphics/outside_dorms_link.jpeg",
+    image: "lib/images/outside_school_link.jpeg",
     color: Colors.deepPurple[100],
   ),
   Post(
@@ -28,7 +28,7 @@ List<Post> posts = [
     title: "Cats in the Parking lot",
     user: "Edith",
     content: "Today I found 3 kittens....",
-    image: "graphics/outside_dorms_link.jpeg",
+    image: "lib/images/outside_school_link.jpeg",
     color: Colors.deepPurple[100],
   ),
 ];

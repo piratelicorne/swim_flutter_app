@@ -1,4 +1,4 @@
-import 'package:swim_flutter_app/models/pool_user_model.dart';
+import '../index.dart';
 
 class Message {
   final User sender;
@@ -19,16 +19,16 @@ class Message {
 
 // YOU - current user
 final User currentUser =
-User(id: 0, name: 'Current User', imageUrl: 'assets/images/greg.jpg');
+User(id: 0, name: 'Current User', imageUrl: 'lib/images/profile.jpeg');
 
 // USERS
-final User greg   = User(id: 1, name: 'Greg', imageUrl: 'graphics/pool_user01.jpeg');
-final User james  = User(id: 2, name: 'James', imageUrl: 'graphics/pool_user01.jpeg');
-final User john   = User(id: 3, name: 'John', imageUrl: 'graphics/pool_user01.jpeg');
-final User olivia = User(id: 4, name: 'Olivia', imageUrl: 'graphics/pool_user01.jpeg');
-final User sam    = User(id: 5, name: 'Sam', imageUrl: 'graphics/pool_user01.jpg');
-final User sophia = User(id: 6, name: 'Sophia', imageUrl: 'graphics/pool_user01.jpg');
-final User steven = User(id: 7, name: 'Steven', imageUrl: 'graphics/pool_user01.jpg');
+final User greg   = User(id: 1, name: 'Greg', imageUrl: 'lib/images/pool_user01.jpeg');
+final User james  = User(id: 2, name: 'James', imageUrl: 'lib/images/pool_user01.jpeg');
+final User john   = User(id: 3, name: 'John', imageUrl: 'lib/images/pool_user01.jpeg');
+final User olivia = User(id: 4, name: 'Olivia', imageUrl: 'lib/images/pool_user01.jpeg');
+final User sam    = User(id: 5, name: 'Sam', imageUrl: 'lib/images/pool_user01.jpeg');
+final User sophia = User(id: 6, name: 'Sophia', imageUrl: 'lib/images/pool_user01.jpeg');
+final User steven = User(id: 7, name: 'Steven', imageUrl: 'lib/images/pool_user01.jpeg');
 
 // FAVORITE CONTACTS
 List<User> favorites = [sam, steven, olivia, john, greg, james];
