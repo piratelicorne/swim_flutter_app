@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:swim_flutter_app/widgets/recent_chats.dart';
+import '../index.dart';
 
 class Onechat extends StatelessWidget {
   @override

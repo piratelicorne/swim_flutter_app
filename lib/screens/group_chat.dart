@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import './screens/components/group_body.dart';
+import '../index.dart';
 
 /*
   first section 10% - users in the chat
