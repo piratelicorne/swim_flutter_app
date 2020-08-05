@@ -1,13 +1,14 @@
 import './index.dart';
-
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: 'Swim App Hackathon Contribution',
-    theme: AppTheme.lightTheme,
-    darkTheme: AppTheme.darkTheme,
-    home: Home(),
-  ));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Swim App Hackathon Contribution',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      home: Home(),
+    )
+  );
 }
 
 class Home extends StatelessWidget {
@@ -15,7 +16,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Navigate Life'),
+        title: Text(
+          'Navigate Life',
+          style: Theme.of(context).textTheme.headline,
+          ),
         leading: Padding(
           padding: const EdgeInsets.all(16),
           child: Icon(Icons.menu),
