@@ -1,13 +1,4 @@
-import 'dart:io';
-
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:swim_flutter_app/models/Pool.dart';
-import 'package:swim_flutter_app/models/Posts.dart';
-import 'package:swim_flutter_app/models/Hashtags.dart';
-import '../group_members.dart';
-import '../list_friends.dart';
-
+import '../../index.dart';
 
 class GBSectButtons extends StatelessWidget {
   @override
@@ -19,7 +10,7 @@ class GBSectButtons extends StatelessWidget {
           child: Text('MEMBERS',
             style: TextStyle(
               fontSize: 13.0,
-              fontFamily: 'NunitoBold',
+              //fontFamily: 'NunitoBold',
             ),
           ),
           color: Colors.deepPurple,
@@ -36,7 +27,7 @@ class GBSectButtons extends StatelessWidget {
           child: Text('INVITE',
             style: TextStyle(
               fontSize: 13.0,
-              fontFamily: 'NunitoBold',
+              //fontFamily: 'NunitoBold',
             ),
           ),
           color: Colors.deepPurple,
@@ -83,7 +74,7 @@ class GBSectPools extends StatelessWidget {
           Text("Pools near you",
             style: TextStyle(
               fontSize: 12,
-              fontFamily: 'NunitoExtraBold',
+              //fontFamily: 'NunitoExtraBold',
             ),
           ),
           Container(
@@ -111,7 +102,7 @@ class GBSectPosts extends StatelessWidget {
           Text("Recent Posts",
             style: TextStyle(
               fontSize: 12,
-              fontFamily: 'NunitoExtraBold',
+              //fontFamily: 'NunitoExtraBold',
             ),
           ),
           Container(
@@ -122,7 +113,8 @@ class GBSectPosts extends StatelessWidget {
               color: posts[1].color,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: Image.asset(pools[1].image),
+            child: Image.asset(posts[1].image),
+            
           ),
         ],
       ),
@@ -139,7 +131,7 @@ class GBSectHashtags extends StatelessWidget {
           Text("Hashtags",
             style: TextStyle(
               fontSize: 12,
-              fontFamily: 'NunitoExtraBold',
+              //fontFamily: 'NunitoExtraBold',
             ),
           ),
           Container(
@@ -194,7 +186,7 @@ class LastMessages extends StatelessWidget{
                 'Last messages',
                 style: TextStyle(
                   color: Colors.deepPurple[800],
-                  fontFamily: 'NunitoBold',
+                 // fontFamily: 'NunitoBold',
                   fontSize: 18,
                 ),
               ),

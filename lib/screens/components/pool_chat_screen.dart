@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:swim_flutter_app/models/pool_message_model.dart';
-import 'package:swim_flutter_app/models/pool_user_model.dart';
+import '../../index.dart';
 
 class ChatScreen extends StatefulWidget {
   final User user;

@@ -1,8 +1,4 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:swim_flutter_app/models/pool_chat_model.dart';
-import 'package:swim_flutter_app/screens/pool_home_screen.dart';
-
+import '../../index.dart';
 /*
 class GBSectUsers extends StatelessWidget {
   @override
@@ -12,24 +8,25 @@ class GBSectUsers extends StatelessWidget {
 }
 */
 
+//lib/images
+
 class PGSectHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context){
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-      children: <Widget>[
+    return Container(
+      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: Column(
+        children: <Widget>[
         Text("42 HACKATON"),
-        Container(
-          padding: EdgeInsets.all(1.0),
-          height: 250,
-          width: 300,
-          decoration: BoxDecoration(
-            color: pools[0].color,
-            borderRadius: BorderRadius.circular(5),
+          Container(
+            padding: EdgeInsets.all(1.0),
+            width: 300,
+            decoration: BoxDecoration(
+              color: pools[0].color,
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: Image.asset(pools[0].image),
           ),
-          child: Image.asset(pools[0].image),
-        ),
         RaisedButton(
           child: Text('TALK'),
           color: Colors.deepPurple,
@@ -42,6 +39,8 @@ class PGSectHeader extends StatelessWidget {
           },
         ),
       ],
+      )
+      
     );
 }
 }
