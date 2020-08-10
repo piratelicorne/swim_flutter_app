@@ -7,10 +7,7 @@ We participated in the Swim-42 Hackathon, which consisted in developing a mobile
 ⚠️ This project is to practice.
 
 ## Version 1.1
-Watch the video -> 
-<img src="https://img.youtube.com/vi/1WTmi9VtjYE/2.jpg" alt="Watch the video" href="https://youtu.be/1WTmi9VtjYE" width="260" HSPACE="42"/> 
-
-[![Watch the video](https://img.youtube.com/vi/1WTmi9VtjYE/2.jpg)](https://youtu.be/1WTmi9VtjYE)
+Watch the video -> [![Watch the video](https://img.youtube.com/vi/1WTmi9VtjYE/2.jpg)](https://youtu.be/1WTmi9VtjYE)
 
 ## Structure
 
