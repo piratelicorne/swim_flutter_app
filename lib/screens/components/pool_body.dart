@@ -35,23 +35,33 @@ class PBSectChat extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return Container(
-      /**
-       * 
-
-class PCSectChat extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
       alignment: Alignment.center,
-      color: Colors.deepPurple[100].withOpacity(0.4),
+      padding: EdgeInsets.all(10.0),
+      color: Colors.deepPurple[100].withOpacity(0.3),
+      child: Column(
+        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Expanded(flex: 1, child: PBSectSearchBar(),), 
+          Expanded(flex: 8, child: PBSectMessages(),), 
+          Expanded(flex: 1, child: PBSectButtons(),), 
+        ],
+      ),
+    );
+  }
+}    
+
+class PBSectSearchBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget> [
+        children: <Widget>[
           Text(
-          'Search',
-          style: TextStyle(
-            color: Colors.deepPurple[600],
-            fontSize: 22,
+            'Search',
+            style: TextStyle(
+              color: Colors.deepPurple[600],
+              fontSize: 17,
             ),
           ),
           IconButton(
@@ -59,55 +69,58 @@ class PCSectChat extends StatelessWidget {
                   color: Colors.deepPurple[800],
                   iconSize: 28,
                   onPressed: (){},
-                ),
-        ],
-      ),
-      
-      //iconTheme: IconThemeData(color: Colors.white),
-    );
-  }
-}
-
-class PCSectOptions extends StatelessWidget {
-  @override
-  Widget build(BuildContext context){
-    /*
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.teal[900].withOpacity(0.2),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30.0),
-          topRight: Radius.circular(30.0),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget> [
-          Text(
-          'Chat',
-          style: TextStyle(
-            color: Colors.deepPurple[900],
-            fontSize: 22,
-            ),
           ),
         ],
       ),
     );
-     
+  }
+}     
 
-    return MaterialApp(
-      title: 'Chat',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+class PBSectMessages extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      color: Colors.deepPurple[100].withOpacity(1),
+    );
+  }
+}
+
+class PBSectButtons extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          RaisedButton(
+            child: Text('CHAT',
+              style: TextStyle(fontSize: 13.0,),
+            ),
+            color: Colors.deepPurple,
+            textColor: Colors.white,
+            onPressed: () {},
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
+          ),
+          RaisedButton(
+            child: Text('LOCATION',
+              style: TextStyle(fontSize: 13.0,),
+            ),
+            color: Colors.deepPurple,
+            textColor: Colors.white,
+            onPressed: () {},
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
+          ),
+          RaisedButton(
+            child: Text('MEMBERS',
+              style: TextStyle(fontSize: 13.0,),
+            ),
+            color: Colors.deepPurple,
+            textColor: Colors.white,
+            onPressed: () {},
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(11.0)),
+          ),
+        ],
       ),
-      home: HomeScreen(),
     );
   }
-}
-
-      */
-      alignment: Alignment.center,
-      color: Colors.deepPurple[100].withOpacity(0.4),
-    );
-  }
-}
+} 

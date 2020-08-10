@@ -10,8 +10,6 @@ class Poolchat extends StatelessWidget {
           children: <Widget>[
             Expanded(flex: 3, child: PBSectPoolView(),),
             Expanded(flex: 7, child: PBSectChat(),),
-            //Expanded(flex: 6, child: PCSectChat(),),
-            //Expanded(flex: 4, child: PCSectOptions(),),*/
           ],
         ),
       ),

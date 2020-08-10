@@ -15,7 +15,6 @@ export './screens/components/group_body.dart';
 export './screens/components/pool_body.dart';
 export 'screens/components/group_members.dart';
 export 'screens/components/list_friends.dart';
-export 'screens/components/pool_body_screen.dart';
 export 'screens/components/pool_home_screen.dart';
 
 
