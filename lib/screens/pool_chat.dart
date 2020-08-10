@@ -8,9 +8,10 @@ class Poolchat extends StatelessWidget {
       body: Container(
         child: Column(
           children: <Widget>[
-            Expanded(flex: 1, child: PGSectHeader(),),
-            Expanded(flex: 6, child: PCSectChat(),),
-            Expanded(flex: 4, child: PCSectOptions(),),
+            Expanded(flex: 3, child: PBSectPoolView(),),
+            Expanded(flex: 7, child: PBSectChat(),),
+            //Expanded(flex: 6, child: PCSectChat(),),
+            //Expanded(flex: 4, child: PCSectOptions(),),*/
           ],
         ),
       ),
